@@ -111,7 +111,7 @@ Background.prototype = new Drawable();
  */
 function Bullet() {
     this.alive = false; // Is true if the bullet is currently in use
-
+        var self = object
 	/*
 	 * Sets the bullet values
 	 */
@@ -131,14 +131,22 @@ function Bullet() {
     this.draw = function () {
         this.context.clearRect(this.x, this.y, this.width, this.height);
         this.y -= this.speed;
-        if (this.y <= 0 - this.height) {
+        if (self === "bullet" && this.y <= 0 - this.height) {
+            return true;
+        }
+        else if (self === "enemyBullet" && this.y >= this.canvasHeight) {
             return true;
         }
         else {
-            this.context.drawImage(imageRepository.bullet, this.x, this.y);
+            if (self === "bullet") {
+                this.context.drawImage(imageRepository.bullet, this.x, this.y);
+            }
+            else if (self === "enemyBullet") {
+                this.context.drawImage(imageRepository.enemyBullet, this.x, this.y);
+            }
+            return false;
         }
     };
-
 	/*
 	 * Resets the bullet values
 	 */
