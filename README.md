@@ -48,12 +48,13 @@ this.draw = function () {
 
             return false;
         }
-    };
-    ```
-    
-   ## Future Features
+    }
+```
+
+ ## Future Features
    
    1. Boss Battles
    2. Multiplayer
     
+  
     
