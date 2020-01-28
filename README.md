@@ -1,5 +1,5 @@
 # InvaderZed
-[Live Link](https://onepunchmanz.github.io/JS-Game/)
+[Live Link](https://onepunchmanz.github.io/InvaderZed/)
 
 InvaderZed is a Galaga inspired game, battle the never ending hoard of space invaders! 
 
