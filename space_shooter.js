@@ -9,6 +9,7 @@ function init() {
     game.init();
 }
 
+ 
 
 /**
  * Define an object to hold all our images for the game so images
@@ -748,8 +749,20 @@ function Game() {
             this.gameOverAudio.load();
 
             this.checkAudio = window.setInterval(function () { checkReadyState() }, 1000);
+
+            
+
         }
     };
+
+    this.mute = function () {
+        this.backgroundAudio.pause();
+
+       
+
+      
+
+    }
 
     // Spawn a new wave of enemies
     this.spawnWave = function () {
@@ -806,7 +819,7 @@ function Game() {
     this.gameOver = function () {
         this.backgroundAudio.pause();
         this.gameOverAudio.currentTime = 0;
-        this.gameOverAudio.play();
+        this.gameOverAudio.play(); 
         document.getElementById('game-over').style.display = "block";
     };
 }
@@ -818,7 +831,7 @@ function checkReadyState() {
     if (game.gameOverAudio.readyState === 4 && game.backgroundAudio.readyState === 4) {
         window.clearInterval(game.checkAudio);
         document.getElementById('loading').style.display = "none";
-        game.start();
+        // game.start();
     }
 }
 
@@ -988,3 +1001,5 @@ window.requestAnimFrame = (function () {
             window.setTimeout(callback, 1000 / 60);
         };
 })();
+
+
