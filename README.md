@@ -1,5 +1,5 @@
 # InvaderZed
-[Live Link](https://onepunchmanz.github.io/JS-Game/)
+[Live Link](https://onepunchmanz.github.io/InvaderZed/)
 
 InvaderZed is a Galaga inspired game, battle the never ending hoard of space invaders! 
 
@@ -20,7 +20,7 @@ Simply use the arrow keys to navigate, and the space bar to blast your laser at 
 
 ## Features
 
-<img src="https://github.com/OnePunchManz/JS-Game/blob/master/invaderZed.png" width="95%" align="center" > 
+<img src="https://github.com/OnePunchManz/JS-Game/blob/master/invaderZed.gif" width="95%" align="center" > 
 
 If the bullet moves off the screen, a new bullet is drawn. 
 
