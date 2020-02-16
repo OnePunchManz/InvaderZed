@@ -783,9 +783,16 @@ function Game() {
 
     // Start the animation loop
     this.start = function () {
+        if(this.started){
+            this.started = false;
+            this.restart();
+       
+        } else {
+        this.started = true;
         this.ship.draw();
         this.backgroundAudio.play();
         animate();
+        }
     };
 
     // Restart the game
