@@ -62,9 +62,7 @@
             position: absolute;
         }
 
-        .button{
-            z-index: 5;
-        }
+       
         .game-over {
             position: absolute;
             margin-top: 10%;
@@ -102,7 +100,9 @@
     #mute {
         display: flex;
         margin-top: 500px;
+        margin-left: 100px;
         margin-left: 14%
+
         
     }
 
@@ -114,6 +114,24 @@
         margin-left: 25%;
         z-index: 2;
     }
+
+    .btn-3d {
+    z-index: 5;
+    position: relative;
+    margin-left: 30px;
+	display: inline-block;
+	font-size: 15px;
+	padding: 5px 11px;
+	color: white;
+	/* margin: 20px 10px 10px; */
+	border-radius: 6px;
+	text-align: center;
+	transition: top .01s linear;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    background-color:  #D19ECB;
+}
+
+.btn-3d.purple:hover {background-color: #D19ECB;}
     </style>
 </head>
 
@@ -127,7 +145,8 @@
     </div>
   <div class="gameDiv">
         <div class="buttonMain">
-            <button id="mute" class="button" onclick="game.start()" style="margin-top: 500px;">Press to Start!</button>
+       
+            <button id="mute" class="btn-3d purple" onclick="game.start()" style="margin-top: 500px;">Press to Start!</button>
         </div>
     <canvas id="background" width="600" height="360">
         Your browser does not support canvas. Please try again with a different browser.
