@@ -20,15 +20,17 @@
         }
 
         #background {
-            z-index: -2;
+            z-index: 3;
         }
 
         #main {
-            z-index: -1;
+            
+            z-index: 3;
+           
         }
 
         #ship {
-            z-index: 0;
+            z-index: 4;
         }
 
         .logo {
@@ -50,12 +52,19 @@
         .main {
             display: flex;
             position: relative;
-        }
-
-        .gameDiv {
+            overflow: hidden;
+            height: 760px;
             
         }
 
+        .buttonMain {
+            left: 0;
+            position: absolute;
+        }
+
+        .button{
+            z-index: 5;
+        }
         .game-over {
             position: absolute;
             margin-top: 10%;
@@ -65,6 +74,7 @@
             font-size: 30px;
             cursor: default;
             display: none;
+            z-index: 3;
         }
 
         .game-over span {
@@ -88,31 +98,37 @@
             cursor: default;
         }
 
+
     #mute {
-            margin-left: 14%
-        }
-    #mute {
-      
+        display: flex;
         margin-top: 500px;
+        margin-left: 14%
         
     }
 
     .controls {
-        margin-top: 75px; 
+        display: flex;
+        position: fixed;
+        margin-top: 500px; 
         color: blueviolet;
         margin-left: 25%;
+        z-index: 2;
     }
     </style>
 </head>
 
 <body>
     <div class="main">
+        <img src="./imgs/wp1822725.png" alt="">
     <div class="logo">
        <img
                 src="https://fontmeme.com/permalink/200127/a26fb3d1952ce3cfa703739da454ec77.png" alt="get-schwifty-font"
                 border="0"></a>
     </div>
   <div class="gameDiv">
+        <div class="buttonMain">
+            <button id="mute" class="button" onclick="game.start()" style="margin-top: 500px;">Press to Start!</button>
+        </div>
     <canvas id="background" width="600" height="360">
         Your browser does not support canvas. Please try again with a different browser.
     </canvas>
@@ -129,13 +145,14 @@
     </div>
     
     <script src="space_shooter.js"></script>
+  
     </div>
+   
     
-    <button id="mute" class="button" onclick="game.start()" style="margin-top: 500px;">Press to Start!</button>
-    </div>
     <div class="controls">
     <h2>Controls: Move – Arrow keys (←↑↓→)
     Shoot – Spacebar</h2>
+    </div>
     </div>
 </body>
 
